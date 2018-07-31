@@ -1,0 +1,126 @@
+@color-active: #ddd;
+.babylon-wander {
+  position: absolute;
+  z-index: 65535;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  &.show {
+    display: block;
+  }
+  .arrow-top, .arrow-right, .arrow-bottom, .arrow-left {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid;
+    border-radius: 3px;
+  }
+  .arrow-top {
+    border-color: transparent transparent #403835 transparent;
+    left: 50%;
+    top: 0;
+    margin-left: -10px;
+    &.active {
+      border-bottom-color: @color-active;
+    }
+  }
+  .arrow-right {
+    border-color: transparent transparent transparent #403835;
+    top: 50%;
+    right: 0;
+    margin-top: -10px;
+    &.active {
+      border-left-color: #ddd;
+    }
+  }
+  .arrow-bottom {
+    border-color: #403835 transparent transparent transparent;
+    left: 50%;
+    bottom: 0;
+    margin-left: -10px;
+    &.active {
+      border-top-color: #ddd;
+
+    }
+  }
+  .arrow-left {
+    border-color: transparent #403835 transparent transparent;
+    top: 50%;
+    left: 0;
+    margin-top: -10px;
+    &.active {
+      border-right-color: #ddd;
+    }
+  }
+  .control-center {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 25px;
+    top: 25px;
+    cursor: pointer;
+    background: url("./bg-control.png") center/contain;
+    &:before {
+      content: "漫游";
+      display: block;
+      width: 90%;
+      height: 90%;
+      position: relative;
+      left: 5%;
+      top: 5%;
+      border-radius: 50%;
+      background: rgba(65, 56, 52, 0.5);
+      text-align: center;
+      line-height: 45px;
+      font-weight: bold;
+      font-size: 15px;
+      color: white;
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+  .control-right .control-center:before {
+    content: "视 点";
+  }
+  .control-left, .control-right {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 48px;
+    background: url("./bg-control.png") center/contain;
+    pointer-events: auto;
+  }
+  .control-left {
+    left: 48px;
+  }
+  .control-right {
+    right: 48px;
+  }
+  .control-jump {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 130px;
+    right: 25px;
+    background: url("./bg-control.png") center / contain;
+    pointer-events: auto;
+    &:before {
+      content: "";
+      cursor: pointer;
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      left: 5%;
+      top: 5%;
+      border-radius: 50%;
+      background: rgba(65, 56, 52, 0.5);
+    }
+    &.active:before {
+      background: rgba(255, 255, 255, 0.5)
+
+    }
+  }
+}
