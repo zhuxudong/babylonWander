@@ -73,7 +73,7 @@ let wander=babylonWander(camera,option)
 * wander.dispose() 
 
 
-![demo](//http://zhuxudong.cn/github/img/babylonWander/1.jpg)
+![demo](zhuxudong.cn/github/img/babylonWander/1.jpg)
 
 
  
