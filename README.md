@@ -1,6 +1,8 @@
 # babylonWander
 > 基于Babylon的漫游手柄插件,该插件使用自己的配置来实现漫游功能，具体配置参考下面option
 
+![demo](https://github.com/zhuxudong/zhuxudong.github.io/blob/master/github/img/babylonWander/1.jpg?raw=true)
+
 ## Global
 ```
 <script src="babylonWander.min.js"></script>  
@@ -71,9 +73,5 @@ let wander=babylonWander(camera,option)
 * wander.hide(disposeEvent?: boolean) 
 > 手动销毁漫游插件.当babylon引擎销毁的时候会自动销毁漫游插件
 * wander.dispose() 
-
-
-![demo](https://github.com/zhuxudong/zhuxudong.github.io/blob/master/github/img/babylonWander/1.jpg?raw=true)
-
 
  
