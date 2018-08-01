@@ -30,7 +30,13 @@ let config = {
     }
   },
   externals: {
-    "babylonjs": "BABYLON"
+    // "babylonjs": "BABYLON"
+    babylonjs: {
+      commonjs: "babylonjs",
+      commonjs2: "babylonjs",
+      amd: "babylonjs",
+      root: "BABYLON"
+    }
   },
   module: {
     rules: [
@@ -133,11 +139,11 @@ if (isDev) {
 /**生产环境*/
 else {
   config.plugins.push(
-    // new UglifyJsPlugin({
-    //   uglifyOptions: {
-    //     compress: base.compress
-    //   }
-    // }),
+    new UglifyJsPlugin({
+      uglifyOptions: {
+        compress: base.compress
+      }
+    }),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, '../', base.copyDir),
       to: base.copyDir,

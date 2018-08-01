@@ -35,11 +35,17 @@ class Demo {
     }
 
     let ball = BABYLON.Mesh.CreateSphere("ball", 50, 32, this.scene);
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 100; i++) {
       let instance = ball.createInstance("ball" + i);
       instance.position = new BABYLON.Vector3(random(-2000, 2000), random(-25, 100), random(-1000, 1000))
     }
     let ground = BABYLON.Mesh.CreateGround("ground", 4000, 4000, 1, this.scene)
+    let grdMat = new BABYLON.StandardMaterial("grdMat", this.scene)
+    let marbleUrl = require("./marble.jpg")
+    let grdTex = new BABYLON.Texture(marbleUrl, this.scene)
+    grdTex.uScale = grdTex.vScale = 100;
+    grdMat.diffuseTexture = grdTex;
+    ground.material = grdMat;
     ground.position.y = -50
     ground.checkCollisions = true;
   }
