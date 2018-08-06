@@ -21,7 +21,8 @@ let config = {
     publicPath: base.publicPath,
     chunkFilename: path.join('js/[id].[chunkhash].js'),
     library: "babylonWander",
-    libraryTarget: "umd"
+    libraryTarget: "umd",
+    libraryExport: 'default'
   },
   resolve: {
     extensions: ['ts', '.js', '.json'],
@@ -30,7 +31,6 @@ let config = {
     }
   },
   externals: {
-    // "babylonjs": "BABYLON"
     babylonjs: {
       commonjs: "babylonjs",
       commonjs2: "babylonjs",

@@ -17,12 +17,12 @@ npm install babylonwander --save
 ```
 use with ES6
 ```
-import babylonWander from 'babylonWander'
+import babylonWander from 'babylonwander'
 babylonWander(camera)
 ```
 or you can use with commonJS
 ```
-let babylonWander=require('babylonWander')
+let babylonWander=require('babylonwander')
 babylonWander(camera)
 ```
 
