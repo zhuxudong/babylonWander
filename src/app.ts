@@ -114,7 +114,8 @@ export default (camera: any, opt?: any) => {
 
   }
 
-  function jump() {
+  function jump(e?: any) {
+    e && e.preventDefault && e.preventDefault();
     controlJump.classList.add("active");
     if (canJump) {
       canJump = false;
