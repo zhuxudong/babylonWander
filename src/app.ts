@@ -201,8 +201,8 @@ export default (camera: any, opt?: any) => {
   function touchstartRight(e: any) {
     e.preventDefault && e.preventDefault();
     e = e.changedTouches ? e.changedTouches[0] : e;
-    let offsetX: any = getComputedStyle(controlLeft).left;
-    let offsetY: any = getComputedStyle(controlLeft).top;
+    let offsetX: any = getComputedStyle(controlRight).left;
+    let offsetY: any = getComputedStyle(controlRight).top;
     touchInfoRight = {
       offsetX: parseFloat(offsetX),
       offsetY: parseFloat(offsetY),
