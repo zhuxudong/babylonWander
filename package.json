@@ -1,6 +1,6 @@
 {
   "name": "babylonwander",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "a extension tool  for babylon's FreeCamera",
   "main": "dist/babylonWander.min.js",
   "scripts": {
