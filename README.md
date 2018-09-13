@@ -69,7 +69,7 @@ let wander=babylonWander(camera,option)
 * wander.setOption({...}) 
 > 显示插件,并开启事件
 * wander.show()
-> 隐藏插件,disposeEvent决定是否隐藏的同时也销毁事件
+> 隐藏插件,disposeEvent决定是否隐藏的同时也销毁事件,默认为false
 * wander.hide(disposeEvent?: boolean) 
 > 手动销毁漫游插件.当babylon引擎销毁的时候会自动销毁漫游插件
 * wander.dispose() 
